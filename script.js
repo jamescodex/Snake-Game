@@ -35,7 +35,7 @@ function drawFood (){
 // call the update function when any key is pressed
 document.addEventListener('keydown', update);
 
-//
+// Update the UI when any key on the keyboard is pressed
 function update(event){
     if(event.keyCode == 37 && direction != 'right') direction = 'left';
     if(event.keyCode == 38 && direction != 'down') direction = 'up';
@@ -83,5 +83,5 @@ function iniciarJogo(){
 
     snake.unshift(newHead);
 }
-
+// set the interval of the jogo
 let jogo = setInterval(iniciarJogo, 100);
