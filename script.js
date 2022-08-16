@@ -1,7 +1,7 @@
-let canvas = document.getElementById("snake"); // ...
-let context = canvas.getContext("2d"); //....
+let canvas = document.getElementById("snake");
+let context = canvas.getContext("2d");
 let box = 32;
-let snake = []; // array to initialisation
+let snake = []; // array to initialization
 snake[0] ={
     x: 8 * box,
     y: 8 * box
