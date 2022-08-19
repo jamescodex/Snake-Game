@@ -1,5 +1,5 @@
 let canvas = document.getElementById("snake");
-let context = canvas.getContext("2d");
+let gameContext = canvas.getContext("2d");
 let box = 32;
 let snake = []; // array to initialization
 snake[0] ={
@@ -14,22 +14,22 @@ let food ={
 
 //
 function criarBG(){
-    context.fillStyle = "lightgreen";
-    context.fillRect(0, 0, 16*box, 16*box);
+    gameContext.fillStyle = "lightgreen";
+    gameContext.fillRect(0, 0, 16*box, 16*box);
 }
 
 //
 function criarCobrinha (){
     for(i = 0; i < snake.length; i++){
-        context.fillStyle = "green";
-        context.fillRect(snake[i].x, snake[i].y, box, box);
+        gameContext.fillStyle = "green";
+        gameContext.fillRect(snake[i].x, snake[i].y, box, box);
     }
 }
 
 // this function draws the shape of the snake food
 function drawFood (){
-    context.fillStyle = "red";
-    context.fillRect(food.x, food.y, box, box);
+    gameContext.fillStyle = "red";
+    gameContext.fillRect(food.x, food.y, box, box);
 }
 
 // call the update function when any key is pressed
